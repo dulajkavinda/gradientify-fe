@@ -1,5 +1,7 @@
+import { GetGradientResponseStatus } from "@/types";
+
 export type GetGradientResponse = {
-  type: "ERROR" | "SUCCESS";
+  type: GetGradientResponseStatus;
   data: string;
 };
 
@@ -40,7 +42,7 @@ const getGradient = async (
     })
     .catch((error) => {
       return {
-        type: "ERROR",
+        type: "ERROR" as GetGradientResponseStatus,
         data: error.message,
       };
     });

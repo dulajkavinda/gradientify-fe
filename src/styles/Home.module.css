@@ -3,5 +3,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 95vh;
+
+  max-width: 70em;
+}
+
+.main h1 {
+  color: var(--color-white);
+  font-family: var(--primary-font);
+
+  font-size: 3rem;
+  text-align: center;
+}
+
+.main p {
+  color: var(--color-blue);
+  font-family: var(--secondary-font);
+
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1em;
 }

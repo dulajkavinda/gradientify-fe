@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import convertToBase64 from "@/utils/conver-to-base64";
 import getGradient from "@/services/get-gradient";
 import { ChangeEvent } from "react";
+import { HERO_TITLE, SUB_TITLE } from "@/config/constants";
 
 export default function Home() {
   const [gradient, setGradient] = useState<string | ArrayBuffer | null>(null);
@@ -28,18 +29,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main
         style={{
           background: gradient?.toString(),
         }}
         className={styles.main}
       >
-        <h1>Upload your files</h1>
+        <h1>{HERO_TITLE}</h1>
+        <p>{SUB_TITLE}</p>
 
-        <form action="">
+        {/* <form action="">
           <input name="file" type="file" onChange={onFileUploadChange} />
         </form>
-        <div> {gradient?.toString()}</div>
+        <div> {gradient?.toString()}</div> */}
       </main>
     </>
   );
