@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState, useCallback } from "react";
 import { DropzoneOptions, useDropzone } from "react-dropzone";
 import styles from "./Upload.module.css";
 
-function StyledDropzone() {
+const Upload = () => {
   const [gradient, setGradient] = useState<string | null>(null);
 
   const onDrop = useCallback(async (acceptedFiles: any) => {
@@ -36,6 +36,6 @@ function StyledDropzone() {
       ></div>
     </div>
   );
-}
+};
 
-export default StyledDropzone;
+export default Upload;
