@@ -5,6 +5,7 @@ import convertToBase64 from "@/utils/conver-to-base64";
 import getGradient from "@/services/get-gradient";
 import { ChangeEvent } from "react";
 import { HERO_TITLE, SUB_TITLE } from "@/config/constants";
+import Upload from "./components/upload/upload";
 
 export default function Home() {
   const [gradient, setGradient] = useState<string | ArrayBuffer | null>(null);
@@ -39,10 +40,7 @@ export default function Home() {
         <h1>{HERO_TITLE}</h1>
         <p>{SUB_TITLE}</p>
 
-        {/* <form action="">
-          <input name="file" type="file" onChange={onFileUploadChange} />
-        </form>
-        <div> {gradient?.toString()}</div> */}
+        <Upload />
       </main>
     </>
   );

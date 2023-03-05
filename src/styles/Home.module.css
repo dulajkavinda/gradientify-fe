@@ -15,11 +15,12 @@
   text-align: center;
 }
 
-.main p {
+.main > p {
   color: var(--color-blue);
   font-family: var(--secondary-font);
 
   font-size: 1.5rem;
   text-align: center;
   margin-top: 1em;
+  margin-bottom: 2em;
 }
