@@ -4,13 +4,15 @@
   align-items: center;
   justify-content: center;
 
-  max-width: 70em;
+  margin-top: 5em;
+  max-width: 65em;
 }
 
 .main h1 {
   color: var(--color-white);
   font-family: var(--primary-font);
 
+  width: 70%;
   font-size: 3rem;
   text-align: center;
 }

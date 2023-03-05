@@ -2,6 +2,7 @@ import getGradient from "@/services/get-gradient";
 import convertToBase64 from "@/utils/conver-to-base64";
 import React, { ChangeEvent, useState, useCallback } from "react";
 import { DropzoneOptions, useDropzone } from "react-dropzone";
+import Compressor from "compressorjs";
 import styles from "./Upload.module.css";
 
 const Upload = () => {
@@ -11,12 +12,16 @@ const Upload = () => {
     const selectedFile = acceptedFiles?.[0];
     if (!selectedFile) return;
 
-    const base64Image = await convertToBase64(selectedFile);
-
-    if (base64Image) {
-      const gradient = await getGradient(base64Image.toString());
-      setGradient(gradient.data);
-    }
+    new Compressor(selectedFile, {
+      quality: 0.1,
+      success: async (compressedImage: File) => {
+        const base64Image = await convertToBase64(compressedImage);
+        if (base64Image) {
+          const gradient = await getGradient(base64Image.toString());
+          setGradient(gradient.data);
+        }
+      },
+    });
   }, []);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
