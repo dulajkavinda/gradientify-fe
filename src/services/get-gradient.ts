@@ -19,7 +19,7 @@ const getGradient = async (
   }
 
   const url =
-    process.env.API_ENDPOINT_LOCAL || "http://localhost:4000/dev/getGradient";
+    process.env.API_ENDPOINT || "http://localhost:4000/dev/getGradient";
 
   if (!url) {
     throw new Error("API endpoint is not defined");
