@@ -8,16 +8,19 @@
   max-width: 65em;
 }
 
-.main h1 {
+.headings {
+  width: 80%;
+}
+
+.headings h1 {
   color: var(--color-white);
   font-family: var(--primary-font);
 
-  width: 70%;
   font-size: 3rem;
   text-align: center;
 }
 
-.main > p {
+.headings > p {
   color: var(--color-blue);
   font-family: var(--secondary-font);
 
@@ -25,4 +28,18 @@
   text-align: center;
   margin-top: 1em;
   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .headings h1 {
+    font-size: 2rem;
+  }
+
+  .headings > p {
+    font-size: 1.2rem;
+  }
+
+  .headings {
+    width: 100%;
+  }
 }

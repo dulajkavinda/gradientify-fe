@@ -45,6 +45,8 @@
   border-radius: 2.5em;
   background-color: #ba8dc6;
   margin: 1em;
+  justify-content: center;
+  align-items: center;
 
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -57,6 +59,26 @@
   background-size: 200% 200%;
   animation: gradient-loading 4s ease-in-out infinite;
   backdrop-filter: blur(10px);
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  width: 10em;
+  height: 4em;
+  border: 2px dashed #7c5c85d4;
+  backdrop-filter: blur(6px);
+  font-family: "Archivo Black", sans-serif;
+  color: #7c5c85d4;
+}
+
+.copy:hover {
+  cursor: pointer;
+  border: 2px dashed #ffffffd4;
+  color: #ffffffd4;
+  transition: all 0.2s ease-in-out;
 }
 
 @keyframes gradient-loading {

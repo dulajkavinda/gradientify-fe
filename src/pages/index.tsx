@@ -6,6 +6,8 @@ import getGradient from "@/services/get-gradient";
 import { ChangeEvent } from "react";
 import { HERO_TITLE, SUB_TITLE } from "@/config/constants";
 import Upload from "./components/upload/Upload";
+import Info from "./components/info/Info";
+import Prompt from "./components/prompt/Prompt";
 
 export default function Home() {
   const [gradient, setGradient] = useState<string | ArrayBuffer | null>(null);
@@ -37,8 +39,12 @@ export default function Home() {
         }}
         className={styles.main}
       >
-        <h1>{HERO_TITLE}</h1>
-        <p>{SUB_TITLE}</p>
+        <div className={styles.headings}>
+          <h1>{HERO_TITLE}</h1>
+          <p>{SUB_TITLE}</p>
+        </div>
+
+        <Info />
         <Upload />
       </main>
     </>
